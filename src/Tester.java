@@ -3,21 +3,16 @@ public class Tester {
     }
     public static void main(String[] args){
 
-        String string1 = "United Kingdom";
-        String string2 = "Germany";
+        String string1 = "United432 Kingdom43";
+        String string2 = "Germany34";
 
-        String sub1 = string1.substring(0,7);
-        String sub2 = string1.substring(6,14);
-
-        int j =string1.length() + string2.length();
-        //System.out.println(j);
-
-        char[] charArray = (sub1 + string2 + sub2).toUpperCase().toCharArray();
-
-        System.out.println(charArray);
+        int j = string1.indexOf(" ");
 
 
+        String sub1 = string1.substring(0,j);
+        String sub2 = string1.substring(j + 1);
 
+        System.out.println((sub1 +" "+ string2 +" "+ sub2).toUpperCase());
 
 
     }
